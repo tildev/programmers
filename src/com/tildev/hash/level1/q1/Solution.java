@@ -1,4 +1,4 @@
-package com.tildev.hash.q1;
+package com.tildev.hash.level1.q1;
 
 
 import java.util.Arrays;
