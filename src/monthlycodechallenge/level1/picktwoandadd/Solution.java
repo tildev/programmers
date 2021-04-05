@@ -1,6 +1,7 @@
 package monthlycodechallenge.level1.picktwoandadd;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 두 개 뽑아서 더하기
@@ -18,6 +19,7 @@ public class Solution {
                 set.add(numbers[i] + numbers[j]);
             }
         }
+        /*
         List<Integer> list = new ArrayList<>(set);
 
         Collections.sort(list);
@@ -26,6 +28,8 @@ public class Solution {
             answer[i] = list.get(i);
         }
         return answer;
+         */
+        return set.stream().sorted().mapToInt(Integer::intValue).toArray();
     }
 
     public static void main(String[] args) {
