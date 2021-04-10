@@ -1,5 +1,9 @@
 package com.tildev.c30.l49993;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+
 /**
  * 스킬트리
  *
@@ -23,6 +27,27 @@ class Solution {
                 answer++;
             }
         }
+        return answer;
+    }
+
+    /**
+     * 다른 사람 풀이 법 ****
+     *
+     * @param skill
+     * @param skill_trees
+     * @return
+     */
+    public int solution1(String skill, String[] skill_trees) {
+        int answer = 0;
+        ArrayList<String> skillTrees = new ArrayList<String>(Arrays.asList(skill_trees));
+        Iterator<String> it = skillTrees.iterator();
+
+        while (it.hasNext()) {
+            if (skill.indexOf(it.next().replaceAll("[^" + skill + "]", "")) != 0) {
+                it.remove();
+            }
+        }
+        answer = skillTrees.size();
         return answer;
     }
 
