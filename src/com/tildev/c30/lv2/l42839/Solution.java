@@ -1,4 +1,4 @@
-package com.tildev.exhaustivesearch.level2.q1;
+package com.tildev.c30.lv2.l42839;
 
 
 import java.util.HashSet;
@@ -6,6 +6,7 @@ import java.util.Set;
 
 /**
  * 소수 찾기
+ * 완전탐색
  *
  * @author tildev
  * @data 2021. 02. 03.
