@@ -9,7 +9,9 @@ package com.tildev.c30.lv2.l60058;
 class Solution {
 
   /**
-   * 문자열 u 가 유효하지 않은 문자열이라면 새로운 u 를 만든다 첫번째와 마지막 문자 제거한 후 나머지 문자열의 괄호 방향을 뒤집는다.
+   * 문자열 u 가 유효하지 않은 문자열이라면 새로운 u 를 만든다
+   * <p>
+   * 첫번째와 마지막 문자 제거한 후 나머지 문자열의 괄호 방향을 뒤집는다.
    *
    * @param s
    * @return
@@ -41,6 +43,9 @@ class Solution {
       return "";
     }
 
+    String u = "";
+    String v = "";
+
     // Are The Parentheses Valid
     boolean isValid = true;
     // Open Parenthesis ('(') Count
@@ -58,21 +63,19 @@ class Solution {
         if (openPCnt < closePCnt) {
           isValid = false;
         }
-        // 균형이 잡혀 있는 괄호일 때
-        if (openPCnt == closePCnt) {
-          break;
-        }
+      }
+
+      // 균형이 잡혀 있는 괄호일 때
+      if (openPCnt == closePCnt) {
+        u = p.substring(0, i + 1);
+        v = p.substring(i + 1);
+        break;
       }
     }
-
-    int index = openPCnt + closePCnt;
-    String u = p.substring(0, index);
-    String v = p.substring(index + 1);
 
     // 유효한 괄호일 경우
     if (isValid) {
       return u + makeStringUAndStringV(v);
-
     } else {
       StringBuilder sb = new StringBuilder("(");
       sb.append(makeStringUAndStringV(v));
@@ -84,7 +87,7 @@ class Solution {
 
   /**
    * solution
-   * 
+   *
    * @param p
    * @return
    */
