@@ -18,7 +18,7 @@ package com.tildev.c30.lv2.l42860;
  * 우측으로 진행하다 AAA... 를 만났을 때
  * 좌측으로 되돌아가 EE를 처리하는 것이 최소 이동 횟수를 가질 수 있다.
  */
-class Solution_FAIL {
+class SolutionFail {
 
   private static final char A = 'A';
   private static final char Z = 'Z';
@@ -82,7 +82,7 @@ class Solution_FAIL {
   public static void main(String[] args) {
     // String name = "JEROEN";
     String name = "JAN";
-    int answer = new Solution_FAIL().solution(name);
+    int answer = new SolutionFail().solution(name);
 
     System.out.println(answer);
 
