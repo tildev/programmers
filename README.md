@@ -11,7 +11,7 @@
 - 탐욕법(Greedy)
     - [x] 조이스틱 (42860)
 - 정렬
-    - [ ] H-Index (42747)
+    - [x] H-Index (42747)
 - 해시
     - [ ] 위장 (42578)
 - 2021 KAKAO BLIND RECRUITMENT
