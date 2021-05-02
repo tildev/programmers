@@ -4,7 +4,9 @@ package com.tildev.c30.lv2.l42747;
 import java.util.Arrays;
 
 /**
- * H-Index 정렬
+ * H-Index
+ * <p>
+ * 정렬
  *
  * @author tildev
  * @data 2021. 05. 02.
