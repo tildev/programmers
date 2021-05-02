@@ -1,7 +1,9 @@
 package com.tildev.c30.lv2.l42578;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * 위장
@@ -31,12 +33,29 @@ class Solution {
     return answer - 1;
   }
 
+  /**
+   * 다른 문제 풀이
+   *
+   * @param clothes
+   * @return
+   */
+  public int solution1(String[][] clothes) {
+    return Arrays.stream(clothes)
+        .collect(
+            Collectors.groupingBy(p -> p[1], Collectors.mapping(p -> p[0], Collectors.counting())))
+        .values()
+        .stream()
+        .collect(Collectors.reducing(1L, (x, y) -> x * (y + 1))).intValue() - 1;
+  }
+
   public static void main(String[] args) {
     String[][] clothes = {{"yellowhat", "headgear"}, {"bluesunglasses", "eyewear"},
         {"green_turban", "headgear"}};
 
     int ans = new Solution().solution(clothes);
+    int ans1 = new Solution().solution1(clothes);
     System.out.println(ans);
+    System.out.println(ans1);
 
   }
 }
