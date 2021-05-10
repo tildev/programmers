@@ -11,8 +11,23 @@ package com.tildev.c30.lv2.l42883;
 class Solution {
 
   public String solution(String number, int k) {
-    String answer = "";
-    return answer;
+    StringBuilder answer = new StringBuilder();
+
+    int index = 0;
+    int max = 0;
+    // k 개의 수를 제거 해야 하므로,
+    // 최댓값은 적어도 뒤에서 k개 앞에서는 나와야 한다
+    for (int i = 0; i < number.length() - k; i++) {
+      max = 0;
+      for (int j = index; j <= k + i; j++) {
+        if (max < number.charAt(j) - '0') {
+          max = number.charAt(j) - '0';
+          index = j + 1;
+        }
+      }
+      answer.append(max);
+    }
+    return answer.toString();
   }
 
   public static void main(String[] args) {
