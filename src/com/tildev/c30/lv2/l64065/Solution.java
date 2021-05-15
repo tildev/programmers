@@ -1,9 +1,14 @@
-package programmers.l64065;
+package com.tildev.c30.lv2.l164065;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
+/**
+ * 튜플
+ * 2019 카카오 개발자 겨울 인턴십
+ *
+ * @author tildev
+ * @data 2021. 05. 15.
+ */
 class Solution {
 	public int[] solution(String s) {
 		// {} 모든 대괄호를 " " 공백으로 치환하여, split(" ,") 을 이용해 각 배열 요소를 뽑아낸다.
