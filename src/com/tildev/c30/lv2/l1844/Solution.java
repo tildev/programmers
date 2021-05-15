@@ -3,6 +3,14 @@ package com.tildev.c30.lv2.l1844;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 게임 맵 최단거리
+ * </
+ * 찾아라 프로그래밍 마에스터
+ *
+ * @author tildev
+ * @data 2021. 05. 15.
+ */
 public class Solution {
 	private static final int[] xArr = { 0, 0, -1, 1 };
 	private static final int[] yArr = { -1, 1, 0, 0 };
