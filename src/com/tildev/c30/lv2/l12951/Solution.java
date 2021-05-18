@@ -25,6 +25,25 @@ public class Solution {
     return answer.toString();
   }
 
+  /**
+   * 다른 풀이
+   *
+   * @param s
+   * @return
+   */
+  public String solutionOther(String s) {
+    String answer = "";
+    String[] sp = s.toLowerCase().split("");
+    boolean flag = true;
+
+    for (String ss : sp) {
+      answer += flag ? ss.toUpperCase() : ss;
+      flag = ss.equals(" ") ? true : false;
+    }
+
+    return answer;
+  }
+
   public static void main(String[] args) {
     String s = "3people unFollowed me";
 
