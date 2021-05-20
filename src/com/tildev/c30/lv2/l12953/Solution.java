@@ -26,11 +26,9 @@ public class Solution {
   }
 
   public int solution(int[] arr) {
-    if (arr.length == 1) {
-      return arr[0];
-    }
-    int answer = getLcm(arr[0], arr[1], getGCD(arr[0], arr[1]));
-    for (int i = 2; i < arr.length; i++) {
+    int answer = arr[0];
+        
+    for (int i = 1; i < arr.length; i++) {
       answer = getLcm(answer, arr[i], getGCD(answer, arr[i]));
     }
     return answer;
